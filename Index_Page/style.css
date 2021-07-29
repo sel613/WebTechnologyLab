@@ -1,0 +1,27 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: #d4ac6e;
+}
+header{
+    background-color: #4f3222;
+    padding: 5px 5px;
+    color: aliceblue;
+    margin:0 0 70px 0;
+}
+table{
+    border-width: 10px;
+    padding: auto;
+}
+thead{
+    color:aliceblue;
+    font-weight: bolder;
+}
+tbody td{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+
+
+}
