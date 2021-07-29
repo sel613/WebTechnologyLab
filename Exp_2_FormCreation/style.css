@@ -1,0 +1,35 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+label {
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: burlywood;
+}
+body {
+  background: hsl(335, 68%, 12%);
+}
+h1 {
+  color: burlywood;
+  text-transform: uppercase;
+  padding: 50px 20px;
+  margin: 8px 0;
+}
+
+input,textarea {
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+textarea,
+input[type="date"],
+input[type="submit"],
+input[type="reset"] {
+  color: rgb(13, 14, 13);
+  background: antiquewhite;
+}
+
+td {
+  color: rgb(0, 209, 122);
+}

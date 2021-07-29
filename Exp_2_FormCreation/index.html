@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Product Enquiry Form</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Product Enquiry Form</h1>
+    <hr width="100%">
+    <form method="get">
+      <table cellspacing="20" cellpadding="8" align="center">
+        <tr>
+          <td><label for="first-name">First Name </label></td>
+          <td>
+            <input
+              type="text"
+              name="first-name"
+              pattern="[A-Za-z]{*}"
+              placeholder="Enter your Firstname"
+              required
+              style="width: 88%"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="last-name">Last Name </label></td>
+          <td>
+            <input
+              type="text"
+              name="last-name"
+              pattern="[A-Za-z]{*}"
+              placeholder="Enter your Lastname"
+              required
+              style="width: 88%"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="dob">DOB</label></td>
+          <td><input type="date" name="dob" required style="width: 88%"/></td>
+        </tr>
+        <tr>
+          <td><label for="gender">Gender</label></td>
+          <td>
+            <input type="radio" name="gender" value="male" required /> Male
+            <input type="radio" name="gender" value="female" /> Female
+            <input type="radio" name="gender" value="other" /> Other
+          </td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td>
+            <input
+              type="email"
+              name="email"
+              placeholder="xyz@email.com"
+              required
+              style="width: 88%"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="phone">Mobile Number </label></td>
+          <td>
+            <input
+              type="text"
+              name="phone"
+              value="+91"
+              size="1"
+              disabled
+              style="width: 88%"
+            /><input
+              type="text"
+              name="phone"
+              pattern="[7-9]{1}[0-9]{9}"
+              placeholder="Enter Mobilenumber"
+              cols="30"
+              required
+              style="width: 88%"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="address">Delivery Address</label></td>
+          <td>
+            <textarea
+              name="address"
+              cols="50"
+              rows="5"
+              placeholder="Type your address"
+              required
+              style="width: 88%"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="pincode">Pin Code</label></td>
+          <td>
+            <input
+              type="text"
+              name="pincode"
+              pattern="[1-9]{1}[0-9]{5}"
+              placeholder="Enter 6 digit postal code"
+              cols="30"
+              required
+              style="width: 88%"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="state">State</label></td>
+          <td><input type="text" placeholder="eg.(TamilNadu)" required style="width: 88%;"/></td>
+        </tr>
+        <tr>
+          <td><label for="product">Product Interested</label></td>
+          <td>
+            <fieldset aria-required="true">
+              <legend style="color: aliceblue">Products</legend>
+              <input type="checkbox" name="product" value="laptops" /> Laptops
+              <input
+                type="checkbox"
+                name="product"
+                value="headphones"
+              /> Headphones
+              <input type="checkbox" name="product" value="speakers" /> Speakers
+              <br>
+              <input type="checkbox" name="product" value="cameras" /> Cameras
+              <input
+                type="checkbox"
+                name="product"
+                value="mobilecables"
+              /> Mobilecables
+              <input
+                type="checkbox"
+                name="product"
+                value="gamingheadsets"
+              /> Gamingheadsets<br>
+              <input
+                type="checkbox"
+                name="product"
+                value="powerbanks"
+              /> Powerbanks
+              <input
+                type="checkbox"
+                name="product"
+                value="keyboards"
+              /> Keyboards
+              <input type="checkbox" name="product" value="mouses" /> Mouses<br>
+              <input
+                type="checkbox"
+                name="product"
+                value="datastorage"
+              /> DataStorages
+            </fieldset>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="purchasemode">Mode of Purchase</label></td>
+          <td>
+            Online <input
+              type="radio"
+              name="purchasemode"
+              value="online"
+              required
+            />
+            Offline <input type="radio" name="purchasemode" value="offline" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="emi">EMI Required?</label></td>
+          <td>
+            Yes <input type="radio" name="emi" value="yes" required /> No <input
+              type="radio"
+              name="emi"
+              value="no"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" name="Submit" style="font-size: larger;background-color: burlywood;" />
+          </td>
+          <td>
+            <input
+              type="reset"
+              name="Reset"
+              style="width: 35%; font-size: larger;background-color: burlywood;"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
