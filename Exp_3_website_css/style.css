@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(image1.jpg);
+}
+nav {
+  width: 100%;
+  height: 80px;
+}
+ul {
+  float: right;
+  list-style-type: none;
+  margin-top: 25px;
+}
+ul li {
+  display: inline-block;
+  margin-right: 50px;
+  font-size: 20px;
+}
+ul li a {
+  text-decoration: none;
+  color: #08fbc2;
+  padding: 10px 0.2px;
+  transition: 0.1s ease;
+  font-size: x-large;
+}
+ul li a:hover {
+  color: #e65609;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+ul li a.active {
+  border-bottom: 3px solid #fff;
+  color: #ffb8f6;
+}
+ul li a.login {
+  border: 1px solid #fff;
+  padding: 2px 20px;
+  border-radius: 30px;
+  color: #ffb8f6;
+}
+ul li a.login:hover {
+  background-color: #e65609;
+  color: #08fbc2;
+}
+.logo {
+  float: left;
+  color: #ffb8f6;
+  position: absolute;
+  top: 27px;
+  font-size: x-large;
+  left: 25px;
+}
+.logo b {
+  font-size: xx-large;
+  margin-right: 10px;
+}
+.main {
+  margin: auto;
+}
+.title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.title h1 {
+  color: #ffb8f6;
+  font-size: 55px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.title p {
+  color: #08fbc2;
+  font-size: 30px;
+  text-align: center;
+}
+
+#nav-bar {
+  background-color: #030249;
+}
+#query-button {
+  top: 50%;
+  left: 35%;
+  position: absolute;
+  padding: 30px;
+  background-color: #640626;
+  border-radius: 20px;
+  border: 5px solid #000;
+}
+
+#query-button a {
+  color: cadetblue;
+  font-size: 30px;
+  text-decoration: none;
+}
+#query-body {
+  width: 100%;
+  height: 100vh;
+  background-size: 500px;
+  background-image: url(querypage.jpg);
+}
+.section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ddd;
+}
+.container {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+.content-section {
+  float: left;
+  width: 80%;
+}
+.content-section .title-about {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: maroon;
+}
+.content-section .content h3 {
+  color: mediumorchid;
+  margin-top: 30px;
+  font-size: 35px;
+}
+.content-section .content p {
+  margin-top: 20px;
+  font-size: 25px;
+  line-height: 2;
+}
