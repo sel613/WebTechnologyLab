@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">  <body>
+    <title>Ebill Calculator</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark ml-auto fixed-top">
+        <div class="container">
+        <a href="" class="navbar-brand">EBILL CALCULATOR</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbaraid">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbaraid">
+        <ul class="navbar-nav text-center ml-auto">
+            <li class="nav-item">
+               <a href="#" class="nav-link">Home</a> 
+            </li>
+            <li class="nav-item">
+                <a href="#calculate" class="nav-link">Bill Calculation</a> 
+            </li>
+            <li class="nav-item">               
+                <a href="#guide" class="nav-link">GuideLines</a> 
+            </li>
+            <li class="nav-item">        
+                <a href="#FAQ" class="nav-link">FAQ</a> 
+            </li>
+        </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="body">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <div>
+                        <h1 style="color:black;">
+                          <span>ELECTRICITY BILL CALCULATOR
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="calculate">
+        <h1 style="text-align: center;color: rgb(1, 1, 100); font-weight: bold;margin: 20px;align-items: center;">Get your Bill Amount here!!!</h1>
+        <form style="margin-left: 20%;" name="select" >
+            <table width="80%">
+                <tr>
+                     <td style="color: rgb(1, 1, 100); font-weight: bold;padding: 10px;margin: 20px;">Tariff Check</td> 
+                     <td style="padding: 10px;margin: 20px;"> <select name="item" onchange="f1()" >
+                             <option value="Commercial">Commercial</option>
+                             <option value="Domestic">Domestic</option>
+                         </select></td>
+                 </tr>
+                  
+
+                 <tr>
+                     <td style="color: rgb(1, 1, 100); font-weight: bold;padding: 10px;margin: 20px;">Billing cycle</td> 
+                     <td style="padding: 10px;margin: 20px;"> <select >
+                          <option value="Commercial">Monthly</option>
+                          <option value="Domestic">Bi Monthly</option>
+                     </select></td>
+                 </tr>
+                 <tr>
+                     <td style="color: rgb(1, 1, 100); font-weight: bold;padding: 10px;margin: 0 20px 0 20px;">Constrated Load(Not Required for Domestic Tariff)</td> 
+                     <td style="padding: 10px;margin: 20px;"><input type="text" id="loads"> </td>
+                 </tr>
+                 <tr>
+                     <td style="color: rgb(1, 1, 100); font-weight: bold;padding: 10px;margin: 20px;">Consumer Units:</td> 
+                     <td style="padding: 10px;margin: 20px;"><input type="text" id="units" placeholder="Enter units"> </td>
+                 </tr>
+                 
+            </table>    
+         </form>
+         <br><br>
+             <button id="btn1" onclick="calculateAmount()" style="margin-left: 50%;text-align: center;"> Calculate</button>
+
+             <br><br><br>
+             <div class="out">
+                <p id="ans" style="text-align:center;color: rgb(1, 1, 100); font-weight: bold;"> WELCOME To EBILL CALCULATION</p>
+             </div>
+    </div>
+    <div class="container-fluid" id="guide">
+        <h1 style="text-align: center;color: rgb(1, 1, 100); font-weight: bold;margin: 0 20px 20px 20px;">GUIDELINES</h1>
+        <ul>
+            <li>New users can sign up through this Web Page for payment of CC charges through Credit / Debit cards or through Net Banking.The consumer has to sign up once for registration.This requires a valid Consumer ID and an e-mail account.</li>
+            <li>On completion of registration requirements, an e-mail is generated to the consumer for successful validation of e-mail ID. A click on the link in the e-mail will lead to user login screen.</li>
+            <li>The user shall login and key in his authenticated password for making payments through web site.</li>
+            <li>Consumer number/User Id for which registration has been made cannot be modified and if required, the user can be deleted through the support link and a fresh registration can be made.</li>
+            <li>One user can add 24 Consumer Numbers using "Add Consumer No" button in his user account and shall pay during the corresponding collection cycle for the respective consumer.Every consumer number has to be individually selected for making payment.</li>
+            <li>A print of the e-receipt could be generated.</li>
+        </ul>
+    </div>
+    <div class="container-fluid" id="FAQ">
+        <h1 style="text-align: center;color: rgb(1, 1, 100); font-weight: bold;margin: 20px;">FAQ</h1>
+        <h2>Explain the process of registration briefly.</h2>
+        <p>www.tangedco.org is the home page of TANGEDCO Limited. A link is available for online payment which leads to another web portal. In this portal, new user sign up is available. Choose this and enter the details required. The service no details are available in the white meter card or in the previous receipts. Choose the region appropriately. An automatic email will be generated on submission of registration particulars and on confirmation through the link on the email, the user is said to be successfully registered.If the service number which you are trying to register is already registered by another consumer, then you will get the message “Consumer number already registered” during registration. Still if you want to register that service number for your account, enter the new User Id and your email id and register a complaint. An email will be sent to the already registered user to delete his account. If he did not delete his account, the system will check the usage of his account for recent transactions and if no transactions were done by him for the registered service number, then his account will be deleted automatically within 7 days and an intimation email will be sent to you for making new registration.
+        </p> 
+        <h2>What is consumer no?</h2>
+        <p>The consumer no is the service no available in the white meter card or in the previous receipts.</p>
+        <h2>How to key in the consumer no in the New User Registration page?</h2>
+        <p>The consumer (or) service no has to be entered in the box provided for this purpose. If the details available in the White meter card are not legible or is not confirming to the requirement, kindly see the example.
+            Example:
+            If the service no written in the card is 5 - 5 - 5, then the service no is 0050055</p>
+        <h2>I want to modify my consumer no after registration. Will I be able to change?</h2>
+        <p>No . You cannot change the service number which was used at the time of registration. If the service number need to be modified for the user already registered due to shifting of house, purchase of new house etc , the user has to delete the online user account using the support option and make a fresh registration with the new service number. However 24 additional service numbers can be added/deleted using the Add Service Number option.</p>
+          
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>Bill Calulator</h3>
+            <p>This website is used to calculate the bill amount based on the user type and services </p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li> 
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2020 Bill Calculator. designed by <span>selvapriyanka</span></p>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
+
+
+
